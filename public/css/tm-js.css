@@ -618,8 +618,15 @@ small {
 }
 
 .profile-sidebar-portlet {
-    padding: 60px 0 px 0 !important;
+    width: 300px;
+    position: fixed;
 }
+
+
+/*.mt-element-ribbon .ribbon.ribbon-clip.ribbon-right {
+    position: fixed;
+}
+*/
 
 .scroll-to-top>i {
     color: #D6AB00;

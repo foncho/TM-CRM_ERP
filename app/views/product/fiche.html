@@ -146,7 +146,7 @@
                             <a ui-sref="product.show.stock({id:product._id})">
                                 <i class="icon-social-dropbox"></i> @(stocks:Stocks) </a>
                         </li>-->
-                        <li ng-class="{active: $state.includes('product.show.images')}">
+                        <!--<li ng-class="{active: $state.includes('product.show.images')}">
                             <a ui-sref="product.show.images({id:product._id})">
                                 <i class="icon-picture"></i> @(products:Images) <span ng-if="product.rating.images != 1" class="fa fa-warning font-red" tooltip-placement="right" tooltip="{{product.rating.images*100 | percent}}"></a>
                         </li>
@@ -163,7 +163,7 @@
                         <li ng-if="product.isVariant" ng-class="{active: $state.includes('product.show.declinations')}">
                             <a ui-sref="product.show.declinations({id:product._id})">
                                 <i class="icon-docs"></i> @(Declinations) </a>
-                        </li>
+                        </li>-->
 
                         <li ng-class="{active: $state.includes('product.show.channels')}">
                             <a ui-sref="product.show.channels({id:product._id})">
@@ -171,27 +171,30 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-            <div class="portlet light">
-                <div class="row list-separated profile-stat">
-                    <div class=" col-md-6 col-sm-6 col-xs-6">
-                        <div class="uppercase profile-stat-title"> <i class="icon-calendar font-yellow-crusta"></i> {{product.createdAt|date:'dd/MM/yyyy HH:mm'}} </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6">
-                        <div class="uppercase profile-stat-title"> <i class="icon-refresh font-yellow-crusta"></i> {{product.updatedAt|date:'dd/MM/yyyy HH:mm'}} </div>
-                    </div>
-
-                    <div>
-                        <div class="col-md-6 col-sm-6 col-xs-6">
-                            <div class="uppercase profile-stat-title"> <a class="font-yellow-crusta">{{product.createdBy.username}}</a> </div>
-                            <!--<div class="uppercase profile-stat-text"> @(CreatedBy)</div>-->
+                <div class="portlet light">
+                    <div class="row list-separated profile-stat">
+                        <div class=" col-md-6 col-sm-6 col-xs-6">
+                            <div class="uppercase profile-stat-title"> <i class="icon-calendar font-yellow-crusta"></i> {{product.createdAt|date:'dd/MM/yyyy HH:mm'}} </div>
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-6">
-                            <div class="uppercase profile-stat-title"> <a class="font-yellow-crusta">{{product.editedBy.username}}</a> </div>
-                            <!-- <div class="uppercase profile-stat-text"> @(EditedBy) </div>-->
+                            <div class="uppercase profile-stat-title"> <i class="icon-refresh font-yellow-crusta"></i> {{product.updatedAt|date:'dd/MM/yyyy HH:mm'}} </div>
+                        </div>
+
+                        <div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <div class="uppercase profile-stat-title"> <a class="font-yellow-crusta">{{product.createdBy.username}}</a> </div>
+                                <!--<div class="uppercase profile-stat-text"> @(CreatedBy)</div>-->
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                <div class="uppercase profile-stat-title"> <a class="font-yellow-crusta">{{product.editedBy.username}}</a> </div>
+                                <!-- <div class="uppercase profile-stat-text"> @(EditedBy) </div>-->
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="portlet light">
+
             </div>
         </div>
         <div ui-view class="profile-content fade-in-up"></div>
